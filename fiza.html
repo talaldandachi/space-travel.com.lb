@@ -1,0 +1,102 @@
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>نعم لفيزا السعودية</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 30px 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+
+    .buttons {
+      margin: 40px 0;
+    }
+
+    button {
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 18px;
+      margin: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #0066cc;
+    }
+
+    .info-box {
+      max-width: 600px;
+      margin: 20px auto;
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      display: none;
+      text-align: right;
+    }
+
+    ul {
+      padding-right: 20px;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>نعم لفيزا السعودية</h1>
+  </header>
+
+  <div class="buttons">
+    <button onclick="showInfo('family')">فيزا عائلية</button>
+    <button onclick="showInfo('tourist')">فيزا سياحة</button>
+    <button onclick="showInfo('work')">فيزا عمل</button>
+  </div>
+
+  <div id="work" class="info-box">
+    <h2>فيزا عمل - لبنان</h2>
+    <ul>
+      <li>سجل عدلي</li>
+      <li>إخراج قيد فردي</li>
+      <li>إخراج قيد عائلي</li>
+      <li>فحص في بيروت في مركز سيما</li>
+      <li>صورتان بخلفية بيضاء</li>
+      <li>جواز سفر صالح لمدة 6 أشهر</li>
+    </ul>
+  </div>
+
+  <script>
+    function showInfo(type) {
+      // إخفاء جميع الصناديق
+      document.querySelectorAll('.info-box').forEach(box => box.style.display = 'none');
+
+      // عرض الصندوق المناسب
+      const box = document.getElementById(type);
+      if (box) {
+        box.style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>
